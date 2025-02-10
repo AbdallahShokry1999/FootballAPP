@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.AllArgsConstructor;
-import lombok.ToString;
 
 @Entity // Marks this class as a JPA entity (maps to a database table)
 @Data // Lombok annotation to generate getters, setters, toString, etc.
