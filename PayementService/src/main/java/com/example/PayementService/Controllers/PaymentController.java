@@ -1,7 +1,10 @@
 package com.example.PayementService.Controllers;
 
 import com.example.PayementService.Models.PaymentRequest;
+import com.example.PayementService.Models.User;
 import com.example.PayementService.Services.PaymentService;
+import com.example.PayementService.Services.UserService;
+import com.example.PayementService.security.JwtUtil;
 import com.paypal.api.payments.Payment;
 import com.paypal.base.rest.PayPalRESTException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,5 +52,21 @@ public class PaymentController {
     public ResponseEntity<String> successPayment() {
         // Handle success logic here, e.g., save transaction to database
         return ResponseEntity.ok("Payment was successful.");
+    }
+
+    @Autowired
+    private UserService userService;
+
+    @Autowired
+    private JwtUtil jwtUtil;
+
+    // Login endpoint
+    @PostMapping("/login")
+    public String login(@RequestBody User user) {
+        try {
+            return jwtUtil.generateToken(user.getUsername());
+        } catch (Exception e) {
+            throw new UnauthorizedException("Invalid credentials");
+        }
     }
 }

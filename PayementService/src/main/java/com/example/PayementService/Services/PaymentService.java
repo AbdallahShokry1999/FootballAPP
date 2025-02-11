@@ -15,7 +15,8 @@ public class PaymentService {
     }
 
     public Payment createPayment(Double total, String currency, String method,
-                                 String intent, String description, String cancelUrl, String successUrl) throws PayPalRESTException {
+                                 String intent, String description, String cancelUrl, String successUrl)
+            throws PayPalRESTException {
 
         // Amount object to hold currency and total
         Amount amount = new Amount();
