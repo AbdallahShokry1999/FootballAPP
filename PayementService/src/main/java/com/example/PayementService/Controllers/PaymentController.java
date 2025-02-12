@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+
 @RequestMapping("/api/payments")
 public class PaymentController {
 
@@ -66,7 +67,18 @@ public class PaymentController {
         try {
             return jwtUtil.generateToken(user.getUsername());
         } catch (Exception e) {
-            throw new UnauthorizedException("Invalid credentials");
+            try {
+                throw new UnauthorizedException("Invalid credentials");
+            } catch (UnauthorizedException ex) {
+                throw new RuntimeException(ex);
+            }
         }
+    }
+    
+}
+
+class UnauthorizedException extends Exception {
+    public UnauthorizedException(String message) {
+        super(message);
     }
 }
