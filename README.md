@@ -42,14 +42,6 @@ Next Steps 🚀
 🔲 Admin dashboard for management
 
 
-Contributors
-👨‍💻 Abdallah Shokry – Lead Developer
-
-
-
-License
-🔓 Open-source under the MIT License.
-
 To Do List 📝
 ✅ Setup Spring Boot microservices
 ✅ Implement JWT Security
@@ -62,7 +54,4 @@ To Do List 📝
 
 
 
-How to Contribute
-Want to improve this project? Fork the repo, create a new branch, and submit a pull request. 🚀
-
-This README will be updated as we complete more features. Let me know when you finish implementing everything so we can finalize it! 🎯
+This README will be updated as we complete more features.🎯
