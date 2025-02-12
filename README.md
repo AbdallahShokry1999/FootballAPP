@@ -9,15 +9,15 @@ This project is a Microservices-based Football Management System that allows use
 Project Architecture 🏗️
 The system consists of multiple microservices:
 
-Service Name		Port	Description
-Match Service		8082	Manages matches between teams and stores results.
-Player Stats Service	8083	Tracks player statistics (goals, assists, etc.).
-Team Management Service	8080	Manages football teams and players.
-Item Service		8085	Stores and sells team-related merchandise.
-Payment Service		8084	Handles payments using PayPal & sends email confirmations.
+Service Name		                    Port	Description
+Match Service		                    8082	Manages matches between teams and stores results.
+Player Stats Service	              8083	Tracks player statistics (goals, assists, etc.).
+Team Management Service	            8080	Manages football teams and players.
+Item Service		                    8085	Stores and sells team-related merchandise.
+Payment Service		                  8084	Handles payments using PayPal & sends email confirmations.
 
 
-API Gateway (Planned)			8081	Central entry point for all services.
+API Gateway (Planned)		          	8081	Central entry point for all services.
 Eureka Service Discovery (Planned)	8761	Registers & discovers microservices dynamically.
 
 
@@ -47,7 +47,6 @@ To Do List 📝
 ✅ Implement JWT Security
 ✅ Add PayPal Payments
 ✅ Send Email Confirmations
-🔲 Integrate with Order & Team Services
 🔲 Store Transactions in Database
 🔲 Enhance Logging & Error Handling
 🔲 API Gateway & Eureka Service Discovery
